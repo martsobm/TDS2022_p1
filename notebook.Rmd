@@ -1,0 +1,33 @@
+# Netflix Movie Data File 
+
+Incluyo este cambio
+Incluyo un segundo cambio
+Tercer cambio
+Cuarto cambio
+
+This dataset contains more than 8,500 Netflix movies and TV shows, including cast members, duration, and genre. It contains titles added as recently as late September 2021.
+
+```{r, message=FALSE}
+library(tidyverse)
+data <- readr::read_csv('data/netflix_dataset.csv')
+head(data,5)
+```
+
+
+### Data Dictionary
+
+| variable      | class     | description                                                   |
+|:--------------|:----------|:--------------------------------------------------------------|
+| type          | character | Either 'TV Show' or 'Movie'                                   |
+| title         | character | The title of the movie or TV show                             |
+| director      | character | The director of the movie or TV show                          |
+| cast          | character | The actors playing in the movie or TV show                    |
+| country       | character | The country in which the movie or TV show was directed        |
+| date_added    | character | The date on which the movie or TV show was added to Netflix   |
+| release_year  | character | The year the movie or TV show was released                    |
+| rating        | character | The kid-friendly rating the movie or TV show received         |
+| duration      | character | The length of the movie or TV show                            |
+| listed_in     | character | The genre of the movie or TV show                             |
+| description   | character | The description/short summary of the movie or TV show         |
+
+[Source of dataset](https://www.kaggle.com/shivamb/netflix-shows).
